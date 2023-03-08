@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('name');
 
             $table->foreign('products_id')->references('id')->on('products');
-            $table->foreign('category_id')->references('id')->on('category');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }
