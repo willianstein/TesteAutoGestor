@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Add New Product</h2>
+                <h2>Criar novo produto</h2>
             </div>
 
             <div class="pull-right">
@@ -17,7 +17,7 @@
     @if ($errors->any())
 
         <div class="alert alert-danger">
-            <strong>Whoops!</strong> There were some problems with your input.<br><br>
+            <strong>ops!</strong> ocorreu um erro.<br><br>
             <ul>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
@@ -34,14 +34,14 @@
 
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
-		            <strong>Name:</strong>
+		            <strong>Nome:</strong>
                     {!! Form::text('name', null, array('placeholder' => 'Name','class' => 'form-control')) !!}
 		        </div>
 		    </div>
 
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
-		            <strong>Detail:</strong>
+		            <strong>Detalhes:</strong>
                     {!! Form::textarea('detail', null, array('placeholder' => 'Detail','class' => 'form-control')) !!}
 		        </div>
 		    </div>
@@ -49,20 +49,20 @@
 
 		    <div class="col-xs-12 col-sm-12 col-md-12">
 		        <div class="form-group">
-		            <strong>Price:</strong>
+		            <strong>Preço:</strong>
                     {!! Form::number('price', null, array('placeholder' => 'Price','class' => 'form-control')) !!}
 		        </div>
 		    </div>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
-                    <strong>Product Image:</strong>
+                    <strong>Produto Image:</strong>
                     {!! Form::file('image', null) !!}
                 </div>
             </div>
 
 		    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-		            <button type="submit" class="btn btn-primary">Submit</button>
+		            <button type="submit" class="btn btn-primary">Salvar</button>
 		    </div>
 
 		</div>
