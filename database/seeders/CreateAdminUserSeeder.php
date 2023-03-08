@@ -27,11 +27,35 @@ class CreateAdminUserSeeder extends Seeder
             'role-create',
             'role-edit',
             'role-delete',
-            'product-list',
             'user-list',
             'user-create',
             'user-edit',
             'user-delete',
+         ];
+
+        $permissions = Permission::whereIn('name', $permissions)->pluck('id','id')->all();
+
+        $role->syncPermissions($permissions);
+
+        $user->assignRole([$role->id]);
+
+
+
+        $user = User::create([
+            'name' => 'auto gestor usuario',
+            'email' => 'user@user',
+            'password' => bcrypt('123123')
+        ]);
+
+        $role = Role::create(['name' => 'User']);
+
+        $permissions = [
+            'product-list',
+            'product-create',
+            'product-edit',
+            'product-delete',
+            'category-list',
+            'mark-list',
          ];
 
         $permissions = Permission::whereIn('name', $permissions)->pluck('id','id')->all();
