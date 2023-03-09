@@ -1,10 +1,16 @@
+Instalar as dependendias do laravel
+composer install
 
-php my admin 
-http://localhost:8009
-user root
-password: (setar no arquivo .env) DB_PASSWORD=123123
+rodar as migrations 
+php artisan migrate
 
 
-acessar phphmyadmin (http://localhost:8009) e criar uma tabela(nesse exemplo coloquei practical_product_test);
+rodar comando para rodas os seeds
+php artisan migrate:fresh --seed
 
-rodar o seguinte comando php artisan migrate
+
+apos 
+php artisan serve
+
+
+
