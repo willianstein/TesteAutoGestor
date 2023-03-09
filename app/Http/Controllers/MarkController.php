@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Mark;
 use Illuminate\Http\Request;
 
 class MarkController extends Controller
@@ -28,7 +29,8 @@ class MarkController extends Controller
      */
     public function index()
     {
-        //
+        $marks = Mark::latest()->paginate(5);
+        return view('marks.index',compact('marks'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

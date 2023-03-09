@@ -51,13 +51,13 @@
                     <!-- Authentication Links -->
                     @guest
                         <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
-                        <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
+
                     @else
                         <li><a class="nav-link" href="{{ route('users.index') }}">Usuários</a></li>
                         <li><a class="nav-link" href="{{ route('roles.index') }}">Regras</a></li>
                         <li><a class="nav-link" href="{{ route('products.index') }}">Produtos</a></li>
                         <li><a class="nav-link" href="{{ route('category.index') }}">Categorias</a></li>
-                        <li><a class="nav-link" href="{{ route('products.index') }}">Marcas</a></li>
+                        <li><a class="nav-link" href="{{ route('marks.index') }}">Marcas</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                                 aria-haspopup="true" aria-expanded="false">{{ Auth::user()->name }}<span

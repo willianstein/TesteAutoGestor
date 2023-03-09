@@ -4,9 +4,8 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Categoria</h2>
+                <h2>Marcas</h2>
             </div>
-
         </div>
     </div>
 
@@ -23,13 +22,13 @@
             <th>Nome</th>
         </tr>
 
-	    @foreach ($categories as $category)
+	    @foreach ($marks as $mark)
 	    <tr>
-	        <td>{{ $category->name }}</td>
+	        <td>{{ $mark->name }}</td>
 	    </tr>
 	    @endforeach
     </table>
 
-    {!! $categories->links() !!}
+    {!! $marks->links() !!}
 
 @endsection
