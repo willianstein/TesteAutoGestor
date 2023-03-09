@@ -13,4 +13,12 @@ apos
 php artisan serve
 
 
+usuario admin
+  'email'    => admin@admin,
+  'password' => 123123
+
+
+usuario user
+  'email'    => user@user,
+  'password' => 123123
 
